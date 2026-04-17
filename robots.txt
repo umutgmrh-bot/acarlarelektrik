@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://DOMAININIZI_BURAYA_YAZIN/sitemap.xml

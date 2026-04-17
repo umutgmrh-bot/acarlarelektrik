@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acarlar Elektrik | Mağaza ve Mağaza Vitrin Aydınlatma Projesi</title>
+  <meta name="description" content="Mağaza vitrin aydınlatması, LED çözümleri ve pano düzenlemesi — Acarlar Elektrik proje örneği." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Acarlar Elektrik | Mağaza ve Mağaza Vitrin Aydınlatma Projesi" />
+  <meta property="og:description" content="Dekoratif vitrin aydınlatması ve enerji tasarruflu LED." />
+  <meta property="og:locale" content="tr_TR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../projects.css" />
+  <script src="../project-gallery.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="../logoacrelektriknew.jpeg" alt="Acarlar Elektrik Logosu" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" data-text="Acarlar Elektrik">Acarlar Elektrik</span>
+          <span class="brand-subtitle" data-text="Elektrik & İletişim Çözümleri">Elektrik & İletişim Çözümleri</span>
+        </div>
+      </div>
+      <div class="topbar-contact">
+        <div class="menu-control">
+          <span class="menu-label" aria-hidden="true">MENÜ</span>
+          <button class="menu-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="btn btn-ghost btn-sm theme-toggle topbar-theme-toggle" type="button" aria-label="Tema değiştir" title="Tema değiştir">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+        <div class="nav-wrap" data-nav-wrap>
+          <nav class="nav-links" aria-label="Site menüsü">
+            <a href="../index.html#anasayfa" class="btn btn-ghost btn-sm">Ana sayfa</a>
+            <a href="../index.html#hakkimizda" class="btn btn-ghost btn-sm">Hakkımızda</a>
+            <a href="../index.html#hizmetler" class="btn btn-ghost btn-sm">Hizmetler</a>
+            <a href="../projeler.html" class="btn btn-ghost btn-sm active">Projeler</a>
+            <a href="../index.html#ulasim" class="btn btn-ghost btn-sm">Ulaşım</a>
+            <a href="../index.html#iletisim" class="btn btn-ghost btn-sm">İletişim</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-projects">
+      <div class="container hero-inner hero-inner-projects">
+        <div class="hero-text hero-text-centered project-detail-hero">
+          <p class="project-detail-back"><a href="../projeler.html">← Tüm projeler</a></p>
+          <div class="project-tag">
+            <span class="project-tag-dot"></span>
+            MAĞAZA
+          </div>
+          <h1 class="hero-title">Mağaza ve Mağaza Vitrin Aydınlatma Projesi</h1>
+          <p class="project-detail-lead">
+            Ürünleri ön plana çıkaran dekoratif aydınlatma, enerji tasarruflu LED çözümleri ve pano düzenlemesi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="project-detail-gallery">
+          <figure class="project-detail-photo">
+            <img src="magaza-vitrin-aydinlatma-projesi/magaza-vitrin-yeni-1.png" alt="Mağaza vitrin aydınlatma — uygulama görseli 1" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-detail-photo">
+            <img src="magaza-vitrin-aydinlatma-projesi/magaza-vitrin-yeni-2.png" alt="Mağaza vitrin aydınlatma — uygulama görseli 2" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-detail-photo">
+            <img src="magaza-vitrin-aydinlatma-projesi/magaza-vitrin-yeni-3.png" alt="Mağaza vitrin aydınlatma — uygulama görseli 3" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-detail-photo">
+            <img src="magaza-vitrin-aydinlatma-projesi/magaza-vitrin-yeni-4.png" alt="Mağaza vitrin aydınlatma — uygulama görseli 4" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Acarlar Elektrik</span>
+        <span>Mağaza ve Mağaza Vitrin Aydınlatma Projesi</span>
+      </div>
+      <div class="footer-contact">
+        <a href="../index.html#ulasim">Haritada Gör</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const THEME_KEY = "theme";
+      const root = document.documentElement;
+
+      const prefersDark =
+        window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const saved = localStorage.getItem(THEME_KEY);
+      const initial = saved === "dark" || saved === "light" ? saved : (prefersDark ? "dark" : "light");
+      root.dataset.theme = initial;
+
+      const themeBtn = document.querySelector(".theme-toggle");
+      const setLabel = () => {
+        if (!themeBtn) return;
+        const isDark = root.dataset.theme === "dark";
+        themeBtn.setAttribute("aria-label", isDark ? "Açık tema" : "Koyu tema");
+        themeBtn.setAttribute("title", isDark ? "Açık tema" : "Koyu tema");
+      };
+      setLabel();
+
+      if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          root.dataset.theme = next;
+          localStorage.setItem(THEME_KEY, next);
+          setLabel();
+        });
+      }
+
+      const toggle = document.querySelector(".menu-toggle");
+      const wrap = document.querySelector("[data-nav-wrap]");
+      const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+
+      if (toggle && wrap) {
+        toggle.addEventListener("click", () => {
+          const isOpen = wrap.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+          toggle.classList.toggle("is-open", isOpen);
+          toggle.classList.remove("is-buzz");
+          void toggle.offsetWidth;
+          toggle.classList.add("is-buzz");
+        });
+
+        wrap.addEventListener("click", (e) => {
+          const a = e.target.closest("a");
+          if (a) {
+            wrap.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.classList.remove("is-open");
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          const clickedToggle = e.target.closest(".menu-toggle");
+          const clickedInsideMenu = e.target.closest("[data-nav-wrap]");
+          if (!clickedToggle && !clickedInsideMenu) {
+            wrap.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.classList.remove("is-open");
+          }
+        });
+      }
+
+      if (navLinks.length) {
+        const path = (location.pathname || "").replace(/\\/g, "/");
+        const onProjeler =
+          /projeler\.html$/i.test(path) || /projeler\/.+\.html$/i.test(path);
+        navLinks.forEach((a) => {
+          const href = a.getAttribute("href") || "";
+          if (href.includes("projeler.html") && onProjeler) {
+            a.classList.add("active");
+          }
+        });
+      }
+
+      if (navLinks.length) {
+        navLinks.forEach((a) => {
+          a.addEventListener("click", () => {
+            navLinks.forEach((x) => x.classList.remove("active"));
+            a.classList.add("active");
+          });
+        });
+      }
+
+      const topbar = document.querySelector(".topbar");
+      if (topbar) {
+        const isMobile = window.matchMedia("(max-width: 880px)");
+        let lastY = window.scrollY || 0;
+        let sinceToggle = 0;
+        let isHidden = false;
+        let tick = false;
+
+        const setByScroll = () => {
+          if (!isMobile.matches) {
+            topbar.classList.remove("topbar-hide-brand");
+            isHidden = false;
+            return;
+          }
+
+          const menuOpen = wrap && wrap.classList.contains("open");
+          if (menuOpen) {
+            topbar.classList.remove("topbar-hide-brand");
+            isHidden = false;
+            lastY = window.scrollY || 0;
+            sinceToggle = 0;
+            return;
+          }
+
+          const y = window.scrollY || 0;
+          const prevY = lastY;
+
+          if (y < prevY) {
+            topbar.classList.remove("topbar-hide-brand");
+            isHidden = false;
+            sinceToggle = 0;
+          }
+
+          if (y < 12) {
+            topbar.classList.remove("topbar-hide-brand");
+            isHidden = false;
+            sinceToggle = 0;
+            lastY = y;
+            return;
+          }
+
+          const delta = y - prevY;
+          lastY = y;
+
+          const d = Math.abs(delta);
+          if (d < 2) return;
+
+          if (delta > 0) {
+            sinceToggle += d;
+          } else {
+            sinceToggle = 0;
+          }
+
+          const canHide = y > 80;
+          const hideAfter = 34;
+
+          if (!isHidden && canHide && delta > 0 && sinceToggle >= hideAfter) {
+            topbar.classList.add("topbar-hide-brand");
+            isHidden = true;
+            sinceToggle = 0;
+          }
+        };
+
+        setByScroll();
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (tick) return;
+            tick = true;
+            requestAnimationFrame(() => {
+              tick = false;
+              setByScroll();
+            });
+          },
+          { passive: true }
+        );
+
+        if (typeof isMobile.addEventListener === "function") {
+          isMobile.addEventListener("change", () => setByScroll());
+        } else if (typeof isMobile.addListener === "function") {
+          isMobile.addListener(() => setByScroll());
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
