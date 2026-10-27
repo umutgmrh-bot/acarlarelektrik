@@ -79,11 +79,11 @@ Outlook kişisel hesaplarda SMTP basic auth kapalıysa ve Microsoft tarafında A
 Not: Bu alanlar doluysa uygulama otomatik Graph üzerinden gönderir; boşsa SMTP kullanır.
 
 ### 1) `sitemap.xml`
-- `https://DOMAININIZI_BURAYA_YAZIN` kısmını kendi domaininle değiştir.
+- Domain/SSL işleminden sonra ekstra dosya düzenlemenize gerek yok: `server.js` artık `robots.txt` ve `sitemap.xml` çıktısını gelen domain'e göre otomatik üretir.
   - Örnek: `https://acarlarelektrik.com/index.html`
 
 ### 2) `robots.txt`
-- `Sitemap:` satırındaki `https://DOMAININIZI_BURAYA_YAZIN/sitemap.xml` kısmını kendi domaininle değiştir.
+- `Sitemap:` satırı da otomatik olarak doğru domain'e ayarlanır.
 
 ### 3) (Önerilen) canonical + og:url
 Domain aldıktan sonra `index.html` ve `projeler.html` içine şunlar eklenebilir:

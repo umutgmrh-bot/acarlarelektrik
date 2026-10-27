@@ -7,15 +7,40 @@
   <meta name="description" content="Site dairelerinde elektrik tesisatı yenileme, sigorta kutusu modernizasyonu ve LED aydınlatma — Acarlar Elektrik proje örneği." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="" id="canonical-link" />
+  <link rel="icon" href="../logoacrelektriknew.jpeg" type="image/jpeg" sizes="any" />
+  <link rel="apple-touch-icon" href="../logoacrelektriknew.jpeg" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Acarlar Elektrik | Site Daire Elektrik Tesisatı Yenileme" />
   <meta property="og:description" content="Konut tipi elektrik tesisatı yenileme ve LED aydınlatma uygulaması." />
   <meta property="og:locale" content="tr_TR" />
+  <meta property="og:url" content="" id="og-url" />
+  <meta property="og:image" content="" id="og-image" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="" id="twitter-image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../projects.css" />
+  <script>
+    (function () {
+      const canonical = document.getElementById("canonical-link");
+      if (canonical) canonical.href = window.location.origin + window.location.pathname;
+
+      const ogUrl = document.getElementById("og-url");
+      if (ogUrl) ogUrl.setAttribute("content", window.location.href);
+
+      const icon = document.querySelector('link[rel="icon"]');
+      const iconHref = icon ? icon.getAttribute("href") : "";
+      const absoluteIcon = iconHref ? new URL(iconHref, window.location.href).href : "";
+
+      const ogImage = document.getElementById("og-image");
+      if (ogImage && absoluteIcon) ogImage.setAttribute("content", absoluteIcon);
+
+      const twImage = document.getElementById("twitter-image");
+      if (twImage && absoluteIcon) twImage.setAttribute("content", absoluteIcon);
+    })();
+  </script>
   <script src="../project-gallery.js" defer></script>
 </head>
 <body>

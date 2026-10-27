@@ -7,17 +7,42 @@
   <meta name="description" content="Acarlar Elektrik İletişim – İstanbul Anadolu yakasında profesyonel elektrik hizmetleri. Arıza, pano/sigorta, aydınlatma, tesisat, data/telefon. Hızlı servis, güvenilir işçilik.">
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="" id="canonical-link" />
+  <link rel="icon" href="logoacrelektriknew.jpeg" type="image/jpeg" sizes="any" />
+  <link rel="apple-touch-icon" href="logoacrelektriknew.jpeg" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Acarlar Elektrik | Profesyonel Elektrik Hizmetleri" />
   <meta property="og:description" content="İstanbul Anadolu yakasında elektrik arıza, pano/sigorta, aydınlatma ve tesisat işleri." />
   <meta property="og:locale" content="tr_TR" />
+  <meta property="og:url" content="" id="og-url" />
+  <meta property="og:image" content="" id="og-image" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="" id="twitter-image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      const canonical = document.getElementById("canonical-link");
+      if (canonical) canonical.href = window.location.origin + window.location.pathname;
+
+      const ogUrl = document.getElementById("og-url");
+      if (ogUrl) ogUrl.setAttribute("content", window.location.href);
+
+      const icon = document.querySelector('link[rel="icon"]');
+      const iconHref = icon ? icon.getAttribute("href") : "";
+      const absoluteIcon = iconHref ? new URL(iconHref, window.location.href).href : "";
+
+      const ogImage = document.getElementById("og-image");
+      if (ogImage && absoluteIcon) ogImage.setAttribute("content", absoluteIcon);
+
+      const twImage = document.getElementById("twitter-image");
+      if (twImage && absoluteIcon) twImage.setAttribute("content", absoluteIcon);
+    })();
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -33,7 +58,6 @@
       },
       "telephone": [
         "+90 216 313 51 94",
-        "+90 534 688 68 10",
         "+90 539 978 27 51"
       ],
       "areaServed": "İstanbul Anadolu yakası"
@@ -43,39 +67,56 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        <div class="brand-logo">
-          <img src="logoacrelektriknew.jpeg" alt="Acarlar Elektrik Logosu" />
-        </div>
-        <div class="brand-text">
-          <span class="brand-name" data-text="Acarlar Elektrik">Acarlar Elektrik</span>
-          <span class="brand-subtitle" data-text="Elektrik & İletişim Çözümleri">Elektrik & İletişim Çözümleri</span>
+      <div class="topbar-left">
+        <div class="brand">
+          <div class="brand-logo">
+            <img src="logoacrelektriknew.jpeg" alt="Acarlar Elektrik Logosu" />
+          </div>
+          <div class="brand-text">
+            <span class="brand-name" data-text="Acarlar Elektrik">Acarlar Elektrik</span>
+            <span class="brand-subtitle" data-text="Elektrik & İletişim Çözümleri">Elektrik & İletişim Çözümleri</span>
+          </div>
         </div>
       </div>
-      <div class="topbar-contact">
-        <div class="menu-control">
-          <span class="menu-label" aria-hidden="true">MENÜ</span>
-          <button class="menu-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
-            <span class="hamburger" aria-hidden="true"></span>
-          </button>
-        </div>
-        <button class="btn btn-ghost btn-sm theme-toggle topbar-theme-toggle" type="button" aria-label="Tema değiştir" title="Tema değiştir">
-          <span class="theme-icon" aria-hidden="true"></span>
-        </button>
-        <button class="btn btn-ghost btn-sm lang-toggle topbar-lang-toggle" type="button" aria-label="Switch language" title="Switch language">EN</button>
+      <div class="topbar-center">
         <div class="nav-wrap" data-nav-wrap>
           <nav class="nav-links" aria-label="Site menüsü">
             <a href="#anasayfa" class="btn btn-ghost btn-sm active">Ana sayfa</a>
             <a href="#hakkimizda" class="btn btn-ghost btn-sm">Hakkımızda</a>
             <a href="#hizmetler" class="btn btn-ghost btn-sm">Hizmetler</a>
             <a href="#projeler" class="btn btn-ghost btn-sm">Projeler</a>
-            <a href="#ulasim" class="btn btn-ghost btn-sm">Ulaşım</a>
             <a href="#iletisim" class="btn btn-ghost btn-sm">İletişim</a>
           </nav>
         </div>
       </div>
+      <div class="topbar-right">
+        <div class="language-switcher" role="group" aria-label="Dil seçimi">
+          <button type="button" class="lang-btn active" data-set-lang="tr" aria-pressed="true" aria-label="Türkçe" title="Türkçe">
+            <img class="lang-btn-img" src="https://flagcdn.com/w40/tr.png" srcset="https://flagcdn.com/w80/tr.png 2x" width="28" height="19" alt="" loading="lazy" decoding="async" />
+          </button>
+          <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false" aria-label="English" title="English">
+            <img class="lang-btn-img" src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x" width="28" height="14" alt="" loading="lazy" decoding="async" />
+          </button>
+        </div>
+        <div class="menu-control">
+          <span class="menu-label" aria-hidden="true">MENÜ</span>
+          <button class="menu-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
+
+  <div class="side-floating-tools" role="toolbar" aria-label="Tema seçimi">
+    <button class="theme-toggle theme-toggle-vertical side-theme-toggle" type="button" aria-label="Tema değiştir" title="Tema değiştir">
+      <span class="theme-switch-track" aria-hidden="true">
+        <span class="theme-switch-dim theme-switch-dim-top" aria-hidden="true">🌙</span>
+        <span class="theme-switch-dim theme-switch-dim-bottom" aria-hidden="true">☀️</span>
+        <span class="theme-switch-thumb" aria-hidden="true"><span class="theme-switch-thumb-icon"></span></span>
+      </span>
+    </button>
+  </div>
 
   <main>
     <section class="hero" id="anasayfa">
@@ -87,20 +128,16 @@
             aydınlatma ve iletişim altyapısında hızlı ve güvenilir çözümler.
           </p>
           <div class="hero-actions">
-            <a href="#iletisim" class="btn btn-primary">Hemen Ara</a>
+            <a href="#iletisim" class="btn btn-primary btn-hero-call">Hemen Ara</a>
             <a href="#hizmetler" class="btn btn-secondary">Hizmetleri Gör</a>
           </div>
-          <div class="hero-meta">
-            <a class="meta-item" href="#iletisim" aria-label="Telefon numaraları için İletişim bölümüne git">
-              <span class="meta-label">Telefon</span>
-              <span class="meta-value">İletişim bölümünden arayabilirsiniz</span>
-            </a>
-            <a class="meta-item" href="#ulasim" aria-label="Adres ve harita için Ulaşım bölümüne git">
-              <span class="meta-label">Adres</span>
-              <span class="meta-value">
-                Çetin Cad. No:11/B Şerifali 34775 Ümraniye/İstanbul (Anadolu)
-              </span>
-            </a>
+          <div class="hero-map-block">
+            <iframe
+              title="Acarlar Elektrik Harita"
+              src="https://www.google.com/maps?q=%C3%87etin%20Cad.%20No%3A11%2FB%20%C5%9Eerifali%2034775%20%C3%9Cmraniye%2F%C4%B0stanbul%20(Anadolu)&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
         <div class="hero-right">
@@ -177,9 +214,9 @@
         </div>
         <div class="card services-card">
           <h3>Teklif Al</h3>
-          <p class="form-note">Hızlı teklif için hemen arayabilirsiniz.</p>
+          <p class="form-note">Hızlı teklif için arayın.</p>
           <div class="hero-actions">
-            <a href="#iletisim" class="btn btn-primary btn-full">Hemen Ara</a>
+            <a href="#iletisim" class="btn btn-primary btn-full btn-offer-call">Hemen Ara</a>
           </div>
         </div>
       </div>
@@ -337,8 +374,8 @@
       <div class="container section-inner">
         <details class="details-card">
           <summary>
-            <span>Daha fazla bilgi</span>
-            <span class="details-hint">Aç / Kapat</span>
+            <span class="details-title">Daha fazla bilgi</span>
+            <span class="details-hint" aria-hidden="true"></span>
           </summary>
           <div class="details-body">
             <p>
@@ -370,64 +407,25 @@
       </div>
     </section>
 
-    <section class="section section-muted" id="ulasim">
-      <div class="container">
-        <div class="section-header">
-          <h2>Ulaşım</h2>
-          <p>İş yerimizi kolayca bulabilmeniz için konumumuz aşağıdadır.</p>
-        </div>
-        <div class="map-wrapper">
-          <iframe
-            title="Acarlar Elektrik Harita"
-            src="https://www.google.com/maps?q=%C3%87etin%20Cad.%20No%3A11%2FB%20%C5%9Eerifali%2034775%20%C3%9Cmraniye%2F%C4%B0stanbul%20(Anadolu)&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="iletisim">
-      <div class="container section-inner two-column align-start">
-        <div>
+      <div class="container section-inner contact-section-inner">
+        <div class="contact-section-heading section-header">
           <h2>İletişim</h2>
           <p>
             Her türlü soru, teklif ve arıza bildirimi için bize aşağıdaki kanallardan ulaşabilirsiniz.
           </p>
+        </div>
 
-          <div class="contact-grid">
-            <div class="contact-item">
+        <form class="contact-form contact-form-centered" id="contact-form">
+          <div class="contact-form-phones">
+            <div class="contact-item contact-item-phones">
               <span class="contact-label">Telefon</span>
               <div class="contact-phone-list">
                 <a href="tel:+902163135194" class="contact-value">(0216) 313 51 94</a>
-                <a href="tel:+905346886810" class="contact-value">+90 534 688 68 10</a>
                 <a href="tel:+905399782751" class="contact-value">+90 539 978 27 51</a>
               </div>
             </div>
-            <div class="contact-item">
-              <span class="contact-label">Adres</span>
-              <a
-                class="contact-value"
-                href="https://www.google.com/maps/search/?api=1&query=%C3%87etin%20Cad.%20No%3A11%2FB%20%C5%9Eerifali%2034775%20%C3%9Cmraniye%20%C4%B0stanbul"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Haritada gör"
-              >
-                Çetin Cad. No:11/B Şerifali 34775<br />
-                Ümraniye/İstanbul (Anadolu)
-              </a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Çalışma Saatleri</span>
-              <span class="contact-value">
-                Pzt–Cmt: 08:30 – 20:00<br />
-                Pazar: 11:00 – 19:00
-              </span>
-            </div>
           </div>
-        </div>
-
-        <form class="contact-form" id="contact-form">
           <h3>Yardım ve İletişim Formu</h3>
           <p class="form-note">
             Bu form şu an örnek görünümdedir. İsterseniz buraya e-posta veya başka bir bildirim entegrasyonu eklenebilir.
@@ -471,7 +469,14 @@
               <a class="quick-contact-value" href="https://www.instagram.com/acrelektrik.tr/" target="_blank" rel="noopener noreferrer">instagram.com/acrelektrik.tr</a>
             </div>
             <div class="quick-contact-row">
-              <span class="quick-contact-label">E-posta</span>
+              <div class="quick-contact-main">
+                <span class="quick-contact-icon quick-contact-icon-static" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z" />
+                  </svg>
+                </span>
+                <span class="quick-contact-label">E-posta</span>
+              </div>
               <a class="quick-contact-value" href="mailto:acarlarelektrik@outlook.com.tr">acarlarelektrik@outlook.com.tr</a>
             </div>
           </div>
@@ -508,8 +513,8 @@
         const initial = saved === "dark" || saved === "light" ? saved : (prefersDark ? "dark" : "light");
         root.dataset.theme = initial;
 
-        const themeBtn = document.querySelector(".theme-toggle");
-        const langBtn = document.querySelector(".lang-toggle");
+        const themeBtn = document.querySelector(".side-theme-toggle");
+        const langPickButtons = () => document.querySelectorAll(".language-switcher .lang-btn[data-set-lang]");
         let currentLang = localStorage.getItem(LANG_KEY) === "en" ? "en" : "tr";
 
         const i18n = {
@@ -517,12 +522,11 @@
             pageTitle: "Acarlar Elektrik | İstanbul Anadolu Yakası Elektrik & İletişim",
             brandSubtitle: "Elektrik & İletişim Çözümleri",
             menuLabel: "MENÜ",
-            nav: ["Ana sayfa", "Hakkımızda", "Hizmetler", "Projeler", "Ulaşım", "İletişim"],
+            nav: ["Ana sayfa", "Hakkımızda", "Hizmetler", "Projeler", "İletişim"],
             heroTitleHtml: "<span>Profesyonel</span> Elektrik Hizmetleri",
             heroLead:
               "Ümraniye çevresinde ve İstanbul Anadolu yakasında elektrik tesisatı, arıza tespiti, pano/sigorta işleri, aydınlatma ve iletişim altyapısında hızlı ve güvenilir çözümler.",
             heroBtns: ["Hemen Ara", "Hizmetleri Gör"],
-            heroMeta: ["Telefon", "İletişim bölümünden arayabilirsiniz", "Adres"],
             hoursTitle: "Çalışma Saatlerimiz",
             days: ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"],
             mapBtn: "Haritada Gör",
@@ -554,7 +558,7 @@
               "Kamera / güvenlik sistemleri kurulumu",
               "İşyeri / ofis elektrik proje uygulamaları"
             ],
-            offerCard: ["Teklif Al", "Hızlı teklif için hemen arayabilirsiniz.", "Hemen Ara"],
+            offerCard: ["Teklif Al", "Hızlı teklif için arayın.", "Hemen Ara"],
             flowTitle: "Hizmet Akışı",
             flowLead: "Net süreç, hızlı iletişim, düzgün teslim. İşin başından sonuna kadar kontrollü ilerleriz.",
             flowNames: ["Keşif", "Teklif", "Uygulama", "Teslim"],
@@ -605,12 +609,9 @@
               ]
             ],
             moreInfo: ["Daha fazla bilgi", "Aç / Kapat"],
-            transportTitle: "Ulaşım",
-            transportLead: "İş yerimizi kolayca bulabilmeniz için konumumuz aşağıdadır.",
             contactTitle: "İletişim",
             contactLead: "Her türlü soru, teklif ve arıza bildirimi için bize aşağıdaki kanallardan ulaşabilirsiniz.",
-            contactLabels: ["Telefon", "Adres", "Çalışma Saatleri"],
-            workHours: "Pzt–Cmt: 08:30 – 20:00<br />Pazar: 11:00 – 19:00",
+            contactLabels: ["Telefon"],
             formTitle: "Yardım ve İletişim Formu",
             formNote:
               "Bu form şu an örnek görünümdedir. İsterseniz buraya e-posta veya başka bir bildirim entegrasyonu eklenebilir.",
@@ -632,12 +633,11 @@
             pageTitle: "Acarlar Electric | Electrical & Communication Services in Istanbul Anatolian Side",
             brandSubtitle: "Electrical & Communication Solutions",
             menuLabel: "MENU",
-            nav: ["Home", "About", "Services", "Projects", "Location", "Contact"],
+            nav: ["Home", "About", "Services", "Projects", "Contact"],
             heroTitleHtml: "<span>Professional</span> Electrical Services",
             heroLead:
-              "Around Umraniye and across Istanbul Anatolian side, we provide fast and reliable solutions for electrical installation, fault detection, panel/fuse works, lighting and communication infrastructure.",
+              "Around Ümraniye and across Istanbul’s Anatolian side, we provide fast, reliable electrical installation, fault finding, panel and fuse work, lighting, and communication infrastructure.",
             heroBtns: ["Call Now", "View Services"],
-            heroMeta: ["Phone", "You can call us from the contact section", "Address"],
             hoursTitle: "Working Hours",
             days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             mapBtn: "View on Map",
@@ -669,7 +669,7 @@
               "Camera / security system installation",
               "Workplace / office electrical project implementation"
             ],
-            offerCard: ["Get a Quote", "Call now for a quick quote.", "Call Now"],
+            offerCard: ["Get a Quote", "Call for a quick quote.", "Call Now"],
             flowTitle: "Service Flow",
             flowLead: "Clear process, fast communication, clean delivery. We move in control from start to finish.",
             flowNames: ["Inspection", "Quote", "Execution", "Delivery"],
@@ -720,12 +720,9 @@
               ]
             ],
             moreInfo: ["More information", "Open / Close"],
-            transportTitle: "Location",
-            transportLead: "Our location is below so you can find us easily.",
             contactTitle: "Contact",
             contactLead: "For all questions, quotes and fault reports, you can reach us through the channels below.",
-            contactLabels: ["Phone", "Address", "Working Hours"],
-            workHours: "Mon–Sat: 08:30 – 20:00<br />Sunday: 11:00 – 19:00",
+            contactLabels: ["Phone"],
             formTitle: "Help & Contact Form",
             formNote:
               "This form is currently a sample view. If you want, email or another notification integration can be added here.",
@@ -777,14 +774,9 @@
           const heroH1 = document.querySelector(".hero-text h1");
           if (heroH1) heroH1.innerHTML = t.heroTitleHtml;
           setText(".hero-lead", t.heroLead);
-          const heroBtns = document.querySelectorAll(".hero-actions .btn");
+          const heroBtns = document.querySelectorAll(".hero-text .hero-actions .btn");
           if (heroBtns[0]) heroBtns[0].textContent = t.heroBtns[0];
           if (heroBtns[1]) heroBtns[1].textContent = t.heroBtns[1];
-          const metaLabels = document.querySelectorAll(".hero-meta .meta-label");
-          if (metaLabels[0]) metaLabels[0].textContent = t.heroMeta[0];
-          if (metaLabels[1]) metaLabels[1].textContent = t.heroMeta[2];
-          const metaValues = document.querySelectorAll(".hero-meta .meta-value");
-          if (metaValues[0]) metaValues[0].textContent = t.heroMeta[1];
 
           setText(".hero-card .title-accent", t.hoursTitle);
           const dayRows = document.querySelectorAll(".hours-list li");
@@ -822,7 +814,8 @@
           });
           setText("#hizmetler .services-card h3", t.offerCard[0]);
           setText("#hizmetler .services-card .form-note", t.offerCard[1]);
-          setText("#hizmetler .services-card .btn", t.offerCard[2]);
+          const offerBtn = document.querySelector("#hizmetler .services-card .btn");
+          if (offerBtn) offerBtn.textContent = t.offerCard[2];
 
           setText("#surec .section-header h2", t.flowTitle);
           setText("#surec .section-header p", t.flowLead);
@@ -861,21 +854,18 @@
             if (p) p.textContent = qa[1];
           });
 
-          const detailsSummary = document.querySelector("#hakkimizda-detay .details-card summary span");
-          if (detailsSummary) detailsSummary.textContent = t.moreInfo[0];
-          const detailsHint = document.querySelector("#hakkimizda-detay .details-hint");
-          if (detailsHint) detailsHint.textContent = t.moreInfo[1];
-
-          setText("#ulasim h2", t.transportTitle);
-          setText("#ulasim .section-header p", t.transportLead);
+          const detailsTitle = document.querySelector("#hakkimizda-detay .details-card summary .details-title");
+          if (detailsTitle) detailsTitle.textContent = t.moreInfo[0];
+          const detailsSummaryEl = document.querySelector("#hakkimizda-detay .details-card summary");
+          if (detailsSummaryEl) {
+            detailsSummaryEl.setAttribute("aria-label", `${t.moreInfo[0]} — ${t.moreInfo[1]}`);
+          }
 
           setText("#iletisim h2", t.contactTitle);
-          setText("#iletisim > .container > div > p", t.contactLead);
+          setText("#iletisim .contact-section-heading > p", t.contactLead);
           document.querySelectorAll("#iletisim .contact-label").forEach((label, i) => {
             if (t.contactLabels[i]) label.textContent = t.contactLabels[i];
           });
-          const hoursText = document.querySelector("#iletisim .contact-item:nth-child(3) .contact-value");
-          if (hoursText) hoursText.innerHTML = t.workHours;
 
           setText("#contact-form h3", t.formTitle);
           setText("#contact-form .form-note", t.formNote);
@@ -903,7 +893,12 @@
           });
           setText(".footer-contact a", t.mapBtn);
 
-          if (langBtn) langBtn.textContent = currentLang === "tr" ? "EN" : "TR";
+          langPickButtons().forEach((btn) => {
+            const lng = btn.getAttribute("data-set-lang");
+            const active = lng === currentLang;
+            btn.setAttribute("aria-pressed", String(active));
+            btn.classList.toggle("active", active);
+          });
         }
 
         const setLabel = () => {
@@ -924,11 +919,12 @@
           });
         }
 
-        if (langBtn) {
-          langBtn.addEventListener("click", () => {
-            applyLanguage(currentLang === "tr" ? "en" : "tr");
+        langPickButtons().forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const lng = btn.getAttribute("data-set-lang");
+            if (lng === "tr" || lng === "en") applyLanguage(lng);
           });
-        }
+        });
 
         const toggle = document.querySelector(".menu-toggle");
         const wrap = document.querySelector("[data-nav-wrap]");

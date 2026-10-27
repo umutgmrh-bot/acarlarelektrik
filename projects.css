@@ -803,6 +803,17 @@ a {
   }
 }
 
+@media (min-width: 881px) and (max-width: 1200px) {
+  html[lang="en"] .nav-wrap {
+    padding: 8px 12px;
+  }
+
+  html[lang="en"] .nav-wrap .nav-links .btn {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
+
 .nav-wrap .nav-links {
   gap: 0;
 }
@@ -1932,22 +1943,29 @@ html[data-theme="dark"] .project-detail-gallery:not(.pg-slider) .project-detail-
 
   .brand-name {
     font-size: 14px;
+    line-height: 1.2;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
   }
 
   .brand-subtitle {
     display: block;
     font-size: 10px;
-    line-height: 1.2;
+    line-height: 1.35;
     opacity: 0.78;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
   }
 
   .brand-text {
     padding: 5px 9px 6px;
     border-radius: 10px;
     gap: 1px;
+    max-width: none;
   }
 
   .projects-grid,
@@ -2107,12 +2125,12 @@ html[data-theme="dark"] .project-detail-gallery:not(.pg-slider) .project-detail-
 @media (max-width: 520px) {
   .topbar-inner {
     padding: 10px 0;
-    gap: 10px;
+    gap: 6px;
     flex-wrap: nowrap;
   }
 
   .brand {
-    gap: 10px;
+    gap: 8px;
     min-width: 0;
     flex: 1 1 auto;
   }
@@ -2125,14 +2143,29 @@ html[data-theme="dark"] .project-detail-gallery:not(.pg-slider) .project-detail-
 
   .brand-text {
     min-width: 0;
+    padding: 4px 7px 5px;
+    max-width: none;
   }
 
   .brand-name {
-    font-size: 15px;
-    line-height: 1.15;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+    line-height: 1.35;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .menu-control {
+    gap: 4px;
   }
 
   .menu-toggle {
